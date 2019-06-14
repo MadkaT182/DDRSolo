@@ -1,0 +1,22 @@
+return Def.ActorFrame {
+	Def.ActorFrame{
+		LoadActor(THEME:GetPathG("Gameplay","FGAnim/howto"))..{
+			OnCommand=cmd(x,SCREEN_LEFT+64;y,SCREEN_CENTER_Y-128);
+		};
+		LoadActor(THEME:GetPathG("Gameplay","FGAnim/howto"))..{
+			OnCommand=cmd(x,SCREEN_LEFT+64;y,SCREEN_CENTER_Y-20);
+		};
+		LoadActor(THEME:GetPathG("Gameplay","FGAnim/howto"))..{
+			OnCommand=cmd(x,SCREEN_LEFT+64;y,SCREEN_CENTER_Y+87);
+		};
+		LoadActor(THEME:GetPathG("Gameplay","FGAnim/howto"))..{
+			OnCommand=cmd(x,SCREEN_RIGHT-64;y,SCREEN_CENTER_Y-128);
+		};
+		LoadActor(THEME:GetPathG("Gameplay","FGAnim/howto"))..{
+			OnCommand=cmd(x,SCREEN_RIGHT-64;y,SCREEN_CENTER_Y-20);
+		};
+		LoadActor(THEME:GetPathG("Gameplay","FGAnim/howto"))..{
+			OnCommand=cmd(x,SCREEN_RIGHT-64;y,SCREEN_CENTER_Y+87);
+		};
+	};
+}

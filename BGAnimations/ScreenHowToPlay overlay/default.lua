@@ -1,0 +1,40 @@
+return Def.ActorFrame {
+	LoadActor("fgs");
+	Def.Quad{
+		OnCommand=cmd(x,SCREEN_CENTER_X;y,SCREEN_BOTTOM-63;diffusecolor,Color.Black;zoomto,SCREEN_WIDTH,50);
+	};
+	LoadActor("text1")..{
+		OnCommand=cmd(x,SCREEN_RIGHT+296;y,SCREEN_BOTTOM-62;sleep,3.175;linear,1.805;x,SCREEN_CENTER_X;sleep,2;linear,1.771;x,SCREEN_LEFT-296);
+	};
+	LoadActor("text1")..{
+		OnCommand=cmd(x,SCREEN_RIGHT+296;y,SCREEN_BOTTOM-62;sleep,7.186;linear,1.805;x,SCREEN_CENTER_X;sleep,2;linear,1.805;x,SCREEN_LEFT-296);
+	};
+	LoadActor("text1")..{
+		OnCommand=cmd(x,SCREEN_RIGHT+296;y,SCREEN_BOTTOM-62;sleep,11.197;linear,1.805;x,SCREEN_CENTER_X;sleep,2;linear,1.805;x,SCREEN_LEFT-296);
+	};
+	LoadActor("text2")..{
+		OnCommand=cmd(x,SCREEN_RIGHT+296;y,SCREEN_BOTTOM-62;sleep,15.309;linear,1.805;x,SCREEN_CENTER_X;sleep,2;linear,1.805;x,SCREEN_LEFT-296);
+	};
+	LoadActor("text3")..{
+		OnCommand=cmd(x,SCREEN_RIGHT+296;y,SCREEN_BOTTOM-62;sleep,23.498;linear,1.805;x,SCREEN_CENTER_X);
+	};
+	LoadActor(THEME:GetPathG("ScreenGameplay","frame/regular/fallback"))..{
+		OnCommand=cmd(Center);
+		Condition=IsUsingWideScreen();
+	};
+	LoadActor(THEME:GetPathG("ScreenGameplay","frame/solo/fallback"))..{
+		OnCommand=cmd(Center);
+		Condition=not IsUsingWideScreen();
+	};
+	LoadActor(THEME:GetPathG("anim","coin"))..{
+		OnCommand=cmd(x,SCREEN_LEFT+28;y,SCREEN_BOTTOM-32;sleep,25.069;linear,.267;x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;sleep,1;diffusealpha,0);
+	};
+	LoadActor(THEME:GetPathG("anim","explosion"))..{
+		InitCommand=cmd(pause);
+		OnCommand=cmd(Center;blend,'BlendMode_Add';diffusealpha,0;sleep,25.871;play;diffusealpha,1;sleep,.97;diffusealpha,0);
+	};
+	LoadActor("htop")..{
+		OnCommand=cmd(x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y+33;zoomy,.05;linear,.468;zoom,1;y,SCREEN_CENTER_Y;sleep,.969;linear,.501;y,SCREEN_CENTER_Y+33;zoomy,0);
+	};
+	LoadActor("../_arcade_decorations");
+}
