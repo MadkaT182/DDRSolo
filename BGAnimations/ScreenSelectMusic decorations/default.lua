@@ -148,7 +148,7 @@ return Def.ActorFrame {
 	};
 	Def.ActorFrame{
 		LoadFont("_difficulty")..{
-			InitCommand=cmd(horizalign,left;x,SCREEN_CENTER_X-107;y,SCREEN_CENTER_Y+47);
+			InitCommand=cmd(horizalign,left;x,SCREEN_CENTER_X-107;y,SCREEN_CENTER_Y+47;diffusetopedge,color("#ffa800");diffusebottomedge,color("#fcff00"));
 			SetCommand=function(self)
 				if not GAMESTATE:IsEventMode() then
 					local song = GAMESTATE:GetCurrentSong();
